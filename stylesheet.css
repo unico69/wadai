@@ -1,0 +1,256 @@
+figure.cp_caption .img1{
+	position: relative;
+	overflow: hidden;
+   float: left;
+	width: 100%;
+	max-width: 46%;
+	margin: 20px 1%;
+	text-align: center;
+	color: #fff;
+	background: rgba(27, 37, 56, 1);
+}
+figure.cp_caption .img2{
+	position: relative;
+	overflow: hidden;
+   float: right;
+	width: 100%;
+	max-width: 46%;
+	margin: 20px 1%;
+	text-align: center;
+	color: #fff;
+	background: rgba(27, 37, 56, 1);
+}
+figure.cp_caption * {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+figure.cp_caption img {
+	width: 100%;
+	-webkit-transition: opacity 0.3s;
+	        transition: opacity 0.3s;
+	opacity: 1;
+}
+figure.cp_caption figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 3em 3em;
+}
+figure.cp_caption figcaption::before {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	bottom: 50%;
+	left: 30px;
+	content: '';
+	-webkit-transition: all 0.4s;
+	        transition: all 0.4s;
+	-webkit-transition-delay: 0.2s;
+	        transition-delay: 0.2s;
+	opacity: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.8);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+	background-color: #fff;
+}
+figure.cp_caption h5 { font-weight: 100; 
+	margin: 0 0 5px;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	        transition: opacity 0.3s, transform 0.3s;
+	opacity: 0;
+}
+figure.cp_caption a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+}
+figure.cp_caption:hover img {
+	opacity: 0.35;
+}
+figure.cp_caption:hover figcaption h5 {
+	-webkit-transition-delay: 0.3s;
+	        transition-delay: 0.3s;
+	-webkit-transform: translate3d(0%, 0%, 0);
+	        transform: translate3d(0%, 0%, 0);
+	opacity: 1;
+}
+
+figure.cp_caption:hover figcaption::before {
+	top: 30px;
+	bottom: 30px;
+	-webkit-transition-delay: 0s;
+	        transition-delay: 0s;
+	opacity: 1;
+	background: rgba(27, 37, 56, 0);
+}
+
+
+
+
+
+
+h3 {font-weight: 100; 
+    
+    color:#000;
+padding: 10px;
+}
+ 
+
+
+
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: inherit;
+}
+input {
+  display: none;
+}
+.cp_fullscreenmenu {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+}
+/*menuコンテンツ*/
+.cp_fullscreenmenu .menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(to top, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.7) 100%);
+}
+.cp_fullscreenmenu .menu label {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-size: 100%;
+}
+.cp_fullscreenmenu .menu .menucont {
+	font-size: 12px;
+	position: relative;
+	top: 50%;
+	margin-top: -170px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.cp_fullscreenmenu .menu ul {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+.cp_fullscreenmenu .menu ul li,
+.cp_fullscreenmenu .menu ul li a {
+	transition: all 0.3s ease;
+}
+.cp_fullscreenmenu .menu ul li a {
+	display: block;
+	padding: 10px 0;
+	color: #000;
+}
+.cp_fullscreenmenu .menu ul li a:hover {
+	color: #fff;
+}
+.cp_fullscreenmenu .menu ul li:hover {
+	background: #000;
+}
+/*クリックしたらメニューが開閉の動作*/
+.cp_fullscreenmenu .menuEffects {
+	visibility: hidden;
+	transition: opacity 0.5s, visibility 0.5s;
+	opacity: 0;
+}
+.cp_fullscreenmenu .menuEffects ul {
+	transition: all 0.5s;
+	transform: translateY(0%);
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .menuEffects {
+	visibility: visible;
+	transition: opacity 0.5s;
+	opacity: 1;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .menuEffects ul {
+	opacity: 1;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open {
+	background-color: transparent;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:before {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	content: '';
+	transform: rotate(45deg);
+	background-color: #000;
+}
+.cp_fullscreenmenu #menuToggle:checked ~ .hamburger .open:after {
+	position: relative;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	content: '';
+	transform: rotate(-45deg);
+	background-color: #000;
+}
+.cp_fullscreenmenu #menuToggle:not(:checked) ~ .menuEffects ul {
+	transform: translateY(-30%);
+}
+/*ハンバーガー*/
+.cp_fullscreenmenu .hamburger {
+	position: relative;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 50px;
+	height: 50px;
+	padding: 15px;
+	cursor: pointer;
+}
+.cp_fullscreenmenu .hamburger:hover .open:before {
+	top: -9px;
+}
+.cp_fullscreenmenu .hamburger:hover .open:after {
+	top: 5px;
+}
+.cp_fullscreenmenu .open,
+.cp_fullscreenmenu .open:before,
+.cp_fullscreenmenu .open:after {
+	position: relative;
+	display: block;
+	width: 24px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #000;
+	transition: all 0.3s ease;
+}
+.cp_fullscreenmenu .open {
+	top: 8px;
+	cursor: pointer;
+}
+.cp_fullscreenmenu .open:before {
+	top: -8px;
+	content: '';
+	transform: rotate(0deg);
+}
+.cp_fullscreenmenu .open:after {
+	top: 4px;
+	content: '';
+}
+
+
