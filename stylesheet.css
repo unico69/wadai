@@ -310,7 +310,7 @@ to {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    #ee88aa,
+    #fff,
     rgba(250, 238, 255, 0.3) 90%,
     rgba(230, 238, 255, 0.5)
   );
@@ -330,7 +330,7 @@ to {
 }
 .circle2 {
   opacity: 0.2;
-  background: #ff0;
+  background: #fff;
   animation: rotation 5s infinite linear;
 }
 .circle3 {
